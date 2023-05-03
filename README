@@ -1,0 +1,61 @@
+Anton Stefan, 321CC
+                                            TEMA1 - PA
+
+Problema1: Feribot
+
+Am implementat o cautare binara unde am luat capatul din stanga cea mai grea masina iar in capatul din dreapta 
+suma minima a tuturor greutatilor masinilor.Avem complexitate temporala O(n log m), unde n e numarul de masini 
+si m e suma tuturor greutatilor masinilor. Avem O(log m) de la cautarea binara si O(n) de la parcurgerea tuturor 
+masinilor pentru fiecare mijloc. 
+Complexitatea temporala e O(n log m) si cea spatiala este O(n).
+
+
+Problema2: Nostory 
+
+Task1:
+Pentru prima cerinta a problemei in care avem un numar nelimitat de mutari am facut un merge la cele doua liste, 
+iar apoi le-am sortat descrescator si am adunat primele n numere la score rezultand scorul maxim.
+Complexitate temporala O(n), si complexitate spatiala O(2*n).
+
+Task2:
+Pentru cerinta a doua in care avem k mutari am luat 2 vectori in care in unul dintre ele am pus elementele maxime, 
+iar in cel de-al doilea elementele care nu au fost bagate in primul vector. Am sortat cei doi vectori primul crescator,
+iar al doilea descrescator, apoi am interschimbat cele mai mici elemente din primul vector care are maximele celor doua
+liste cu cele mai mari elemente din elementele nebagate din al doilea vector.
+Complexitate temporala si spatiala O(n). 
+
+
+Problema3: Sushi // Am preluat cod din cadrul laboratorului de PA (mai exact lab3 problema RUCSAC)
+
+Task1:
+Pentru prima cerinta am luat un vector denumit scores unde am adugat suma notelor obtinuta pe fiecare coloana din grades 
+care ii corespunde fiecarui platou. Apoi am aplicat algoritmul variantei discrete a problemei rucsac.
+Complexitate temporala si spatiala O(m*W) unde m e numarul de platouri si W bugetul maxim.
+
+Task2:
+La a doua cerinta am aplicat aceeasi metoda ca la prima doar ca am verificat in plus daca incap doua platouri in loc de 1 
+de tipul respectiv.
+Complexitate temporala si spatiala O(m*W) unde m e numarul de platouri si W bugetul maxim.
+
+Task3:
+La a treia cerinta am luat o abordare putin diferita. Pentru ca trebuie luate maxim n platouri, cu o limita de doua platouri
+din fiecare tip am dublat matricea initiala de scoruri(suma notelor) si de costuri sa aiba cate doua platouri din fiecare.
+Am iterat pana la 2*m platouri de aceasta data din cauza dublarii si am  mai adaugat un for pana la n pentru a gasi cea mai 
+mare suma a scorurilor de maxim n platouri. La final am returnat ultima pozitie, avand scorul maxim al notelor ce poate fi obtinut.
+Complexitatea temporala si spatiala O(2*m*W*n) unde m e numarul de platouri disponibile, W bugetul maxim si n numarul de platouri 
+pe care le putem alege.
+
+
+Problema4: Semnale
+
+Task1:
+Pentru task1 am folosit un array tri-dimensional cu o abordare bottom-up in care incepem de la dp[0][0][0] = 1 pana la dp[x+y][y][0].
+In primul task pur si simplu calculam toate posibilatile de reprezentare a X de 0 si Y de 1 in care nu exista 2 de 1 consecutivi, in 
+care  iteram prin toate starile anterioare posibile de biti, si verificam daca trebuie pus un 1 sau un 0.
+Complexitate temporala si spatiala O((x+y)*y*2).
+
+Task2:
+Pentru task2 am folosit aceeasi maniera ca la task1 doar ca avem de data aceasta mai multe posibile stari anterioare de biti, pentru
+ca avem voie sa avem doi de 1 consecutivi.
+Complexitate temporala si spatiala O((x+y)*y*3).
+

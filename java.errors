@@ -1,0 +1,4 @@
+Starting audit...
+[WARN] /home/student/pa-tema1/./skel/semnale/SemnaleSkeleton.java:7: The name of the outer type and the file do not match. [OuterTypeFilename]
+[WARN] /home/student/pa-tema1/./skel/sushi/SushiSkeleton.java:7: The name of the outer type and the file do not match. [OuterTypeFilename]
+Audit done.
